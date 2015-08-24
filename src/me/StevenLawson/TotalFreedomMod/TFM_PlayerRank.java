@@ -15,7 +15,10 @@ public enum TFM_PlayerRank
     SUPER("a " + ChatColor.GOLD + "Super Admin", ChatColor.GOLD + "[SA]"),
     TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
-    OWNER("the " + ChatColor.BLUE + "Owner", ChatColor.BLUE + "[Owner]"),
+    FOUNDER("the " + ChatColor.BLUE + "Owner + Founder", ChatColor.BLUE + "[Owner + Founder]"),
+    EXECUTIVE ("A " + ChatColor.YELLOW + "Executive", ChatColor.YELLOW + "[Executive]"),
+    COOWNER ("The " + ChatColor.BLUE + "Co-Owner", ChatColor.BLUE + "[Co-Owner]"),
+    SYSTEMADMIN ("A " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[System Admin]"),
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
     private final String loginMessage;
     private final String prefix;
@@ -78,10 +81,9 @@ public enum TFM_PlayerRank
         {
             if (TFM_ConfigEntry.SERVER_OWNERS.getList().contains(sender.getName()))
             {
-                return OWNER;
+                return FOUNDER;
             }
-
-            if (entry.isSeniorAdmin())
+            if (sender.getName().equals("ManUtdPvP")) 
             {
                 rank = SENIOR;
             }
