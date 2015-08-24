@@ -1,0 +1,95 @@
+package me.StevenLawson.TotalFreedomMod.Commands;
+
+import static me.StevenLawson.TotalFreedomMod.Commands.Command_smite.smite;
+import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
+import me.StevenLawson.TotalFreedomMod.TFM_Ban;
+import me.StevenLawson.TotalFreedomMod.TFM_BanManager;
+import me.StevenLawson.TotalFreedomMod.TFM_Util;
+import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.util.Vector;
+
+@CommandPermissions(level = AdminLevel.SUPER, source = SourceType.BOTH)
+@CommandParameters(
+        description = "A command for system admins only",
+        usage = "/<command> [add <player> | del <player> | suspend <player> | teston | testoff]")
+public class Command_sys extends TFM_Command
+{
+    private String playerIp;
+    private String ip;
+    @Override
+    public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole){
+    	
+          
+        if (!TFM_Util.FOUNDER.contains(sender.getName()) && !TFM_Util.DARK.contains(sender.getName()))
+        {
+            playerMsg(TFM_Command.MSG_NO_PERMS);
+            TFM_Util.adminAction("WARNING: " + sender.getName(), "Has attempted to use a system admin only command. System administration team has been alerted.", true);
+            smite(sender_p);
+            //lol smites them if they cant do /sys i'm really evil :)
+            //heheheheaw - Dark
+            //P.S - I will add Sys Perms when we have Sys Admins. 
+            return true;
+        } 
+        if (args.length == 0)
+        {
+            return false;
+        }
+
+        String mode = args[0].toLowerCase();
+
+        if (mode.equals("add"))
+        {
+        	Player player = getPlayer(args[1]);
+        	if (player == null){
+        		sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
+        	}
+        	TFM_Util.adminAction(sender.getName(), "Adding " + args[1] + " to the superadmin list", true);
+        	TFM_AdminList.addSuperadmin(player);
+        }
+        
+        if (mode.equals("del"))
+        {
+        	Player player = getPlayer(args[1]);
+        	if (player == null){
+        		sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
+        	}
+        	TFM_Util.adminAction(sender.getName(), "Removing " + args[1] + " from the superadmin list", true);
+        	TFM_AdminList.removeSuperadmin(player);
+        }
+        if (mode.equals("suspend"))
+        {
+        	Player player = getPlayer(args[1]);
+        	if (player == null){
+        		sender.sendMessage(TFM_Command.PLAYER_NOT_FOUND);
+        	}
+        	TFM_Util.adminAction(sender.getName(), "Removing " + args[1] + " from the superadmin list", true);
+            TFM_Util.adminAction(sender.getName(), "Suspending " + args[1] + " For Ever!", true);
+        	TFM_AdminList.removeSuperadmin(player);
+            smite(player);
+            TFM_BanManager.addIpBan(player);
+            TFM_BanManager.addUuidBan(player);
+            player.setGameMode(GameMode.SURVIVAL);
+            player.setOp(false);
+            player.getInventory().clear();
+            player.setFireTicks(10000);
+            TFM_Util.adminAction(sender.getName(), "Banning " + player.getName() + ", IP: " + ip, true);
+            player.kickPlayer(ChatColor.RED + "You have been suspended, BITCH");
+        }
+        
+        if (mode.equals("teston"))
+        {
+        	TFM_Util.bcastMsg(ChatColor.RED + "WARNING: " + sender.getName() + " has started fucking his rank!");
+        }
+        
+        if (mode.equals("testoff"))
+        {
+        	TFM_Util.bcastMsg(ChatColor.RED + sender.getName() + " has successfully tested on this server.");
+        }
+        
+        return true;
+    }  
+}
