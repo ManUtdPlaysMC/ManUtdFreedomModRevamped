@@ -1,11 +1,11 @@
-# Contributing to TotalFreedomMod #
-TotalFreedomMod is a CraftBukkit server plugin designed primarily to support the [Official TotalFreedom Minecraft Server](http://totalfreedom.me/). However, it can be used in a variety of other configurations with minimal fuss.
+# Contributing to ManUtdFreedomMod #
+ManUtdFreedomMod is a CraftBukkit server plugin designed primarily to support the ManUtdFreedom Server(http://diamondfreedom.yolasite.com/). However, it can be used in a variety of other configurations with minimal fuss.
 
 For those who wish to contribute, we encourage you to fork the repository and submit pull requests. Below you will find guidelines that explain this process in further detail.
 
 ## Quick Guide ##
 1. Create or find an issue on our [Issue Tracker](https://github.com/TotalFreedom/TotalFreedomMod/issues).
-2. Does your change fits TotalFreedomMod's goals?
+2. Does your change fits ManUtdFreedomMod's goals?
 3. Fork TotalFreedomMod if you haven't done so already.
 4. Make a branch dedicated to your change.
 5. Make your change.
@@ -88,10 +88,3 @@ meaning you can't remove your current IP or an IP that doesn't belong to you.
 * Please avoid having to add files in the main namespace where possible.
 * Please refrain from using an excessive amount of commits. As few as possible is generally the best.
 * Please do not spread your contribution over several pull-requests.
-
-## Additional Resources ##
-* [TotalFreedom information](http://totalfreedom.me)
-* [TotalFreedom forums](http://totalfreedom.boards.net)
-* [Bug tracker](https://github.com/TotalFreedom/TotalFreedomMod/issues)
-* [General GitHub documentation](http://help.github.com/)
-* [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
