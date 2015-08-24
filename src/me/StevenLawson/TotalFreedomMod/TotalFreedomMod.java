@@ -50,8 +50,8 @@ public class TotalFreedomMod extends JavaPlugin
     //
     public static String buildNumber = "1";
     public static String buildDate = TotalFreedomMod.buildDate = TFM_Util.dateToString(new Date());
-    public static String buildCreator = "Unknown";
-    //
+    public static String buildCreator = "ManUtdPvP";
+        //
     public static Server server;
     public static TotalFreedomMod plugin;
     public static String pluginName;
