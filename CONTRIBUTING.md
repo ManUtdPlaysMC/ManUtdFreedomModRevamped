@@ -20,14 +20,14 @@ For those who wish to contribute, we encourage you to fork the repository and su
   * If your issue is a feature request, ensure it fits TotalFreedomMod's goals and describe your feature in detail.
 * Fork the repository on GitHub.
 
-## Does the change fit TotalFreedomMod's goals? ##
+## Does the change fit ManUtdFreedomMod's goals? ##
 As a rough guideline, ask yourself the following questions to determine if your proposed change fits the TotalFreedomMod project's goals. Please remember that this is only a rough guideline and may or may not reflect the definitive answer to this question.
 
-* Is the change in line with the principles of "Total Freedom"?
+* Is the change in line with the principles of "ManUtdFreedom"?
   TotalFreedom is a freedom-based server. We don't normally make changes that restrict players unless absolutely necessary.
 
-* Is the change directed towards the TotalFreedom server?
-  Changes must be directed towards the TotalFreedom server. Changes such as adding ranks, adding the name of other TotalFreedom-like servers will not likely be accepted.
+* Is the change directed towards the ManUtdFreedom server?
+  Changes must be directed towards the ManUtdFreedom server. Changes such as adding ranks, adding the name of other ManUtdFreedom-like servers will not likely be accepted.
 
 * Does the change add a feature that involves micromanagement?
   Pull requests that involve adding a micromanagement feature will likely not be accepted. This includes shorthands for multiple commands.
