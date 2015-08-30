@@ -50,7 +50,7 @@ public class TotalFreedomMod extends JavaPlugin
     //
     public static String buildNumber = "1";
     public static String buildDate = TotalFreedomMod.buildDate = TFM_Util.dateToString(new Date());
-    public static String buildCreator = "Unknown";
+    public static String buildCreator = "ManUtdPvP";
     //
     public static Server server;
     public static TotalFreedomMod plugin;
@@ -59,6 +59,7 @@ public class TotalFreedomMod extends JavaPlugin
     //
     public static boolean lockdownEnabled = false;
     public static Map<Player, Double> fuckoffEnabledFor = new HashMap<Player, Double>();
+    public static String PLAYER_NOT_FOUND;
 
     @Override
     public void onLoad()
@@ -77,7 +78,7 @@ public class TotalFreedomMod extends JavaPlugin
     @Override
     public void onEnable()
     {
-        TFM_Log.info("Made by Madgeek1450 and Prozza");
+        TFM_Log.info("Made by ManUtdPvP");
         TFM_Log.info("Compiled " + buildDate + " by " + buildCreator);
 
         final TFM_Util.MethodTimer timer = new TFM_Util.MethodTimer();

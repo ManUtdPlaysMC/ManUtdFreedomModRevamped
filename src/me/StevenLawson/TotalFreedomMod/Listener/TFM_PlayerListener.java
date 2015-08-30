@@ -862,9 +862,42 @@ public class TFM_PlayerListener implements Listener
             name = ChatColor.DARK_PURPLE + name;
             TFM_PlayerData.getPlayerData(player).setTag("&8[&5Developer&8]");
         }
+        if (player.getName().equals("Alco_Rs11"))
+        {
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4System-Admin&8]");
+            player.chat("Long Live Conrail!");
+        }
+        if (player.getName().equals("DarkHorse108"))
+        {
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4System-Admin&8]");
+        }
+        if (player.getName().equals("DarkGamingDronze"))
+        {
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4Co-Founder&8] [&5Lead-Developer&8]");
+            player.chat("Ill lel around lel");
+        }
+            else if (player.getName().equals("ManUtdPvP"))
+        {
+            player.setPlayerListName(ChatColor.DARK_RED + player.getName());
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner + Founder&8]");
+            player.chat("I love Manchester United!");
+        }
         else if (TFM_AdminList.isSuperAdmin(player))
         {
-            if (TFM_ConfigEntry.SERVER_OWNERS.getList().contains(name))
+            if (TFM_Util.SYSTEMADMINS.contains(player.getName()));
+        {
+            name = ChatColor.DARK_RED + name;
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&4System-Admin&8]");
+        }
+            if (TFM_Util.EXECUTIVES.contains(player.getName()));
+        {
+            name = ChatColor.YELLOW + name;
+            TFM_PlayerData.getPlayerData(player).setTag("&8[&eExecutive&8]");
+        }    
+        if (TFM_ConfigEntry.SERVER_OWNERS.getList().contains(name))
             {
                 name = ChatColor.BLUE + name;
                 TFM_PlayerData.getPlayerData(player).setTag("&8[&9Owner&8]");
