@@ -101,7 +101,7 @@ public class Command_optroll
     player.setFireTicks(10000);
     player.getWorld().createExplosion(player.getLocation(), 4.0F);
     // im awesome aint i?
-    //moar spam = moar op >:D
+    //moar spam = moar op - alco was here >:D
          sender.sendMessage(player.getName() + " is now gone.");
           player.setVelocity(player.getVelocity().clone().add(new Vector(0, 20, 0)));
           player.setVelocity(player.getVelocity().clone().add(new Vector(0, 20, 0)));
