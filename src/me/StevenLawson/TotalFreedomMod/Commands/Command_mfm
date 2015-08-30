@@ -21,7 +21,7 @@ import org.bukkit.entity.Player;
 @CommandPermissions(level = AdminLevel.ALL, source = SourceType.BOTH)
 @CommandParameters(description = "Shows information about ManUtdFreedomMod or reloads it", usage = "/<command> [reload]")
 public class Command_mfm extends TFM_Command
-{
+{//Like totally stolen from the /efm - Alco :l//
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
@@ -45,7 +45,7 @@ public class Command_mfm extends TFM_Command
             TFM_BanManager.load();
             TFM_CommandBlocker.load();
 
-            final String message = String.format("ManUtdFreedomMod 0.2 BETA reloaded.",
+            final String message = String.format("ManUtdFreedomModRevamped 0.1 BETA reloaded.",
                     TotalFreedomMod.pluginName,
                     TotalFreedomMod.pluginVersion,
                     TotalFreedomMod.buildNumber);
@@ -55,10 +55,10 @@ public class Command_mfm extends TFM_Command
             return true;
         }
 
-       TFM_Util.playerMsg(sender_p, " §c§lManUtdFreedomModRevamped:", ChatColor.GOLD);
-        TFM_Util.playerMsg(sender_p, "Made by:  ManUtdPvP with the help of DarkGamingDronze.", ChatColor.GREEN);
-        TFM_Util.playerMsg(sender_p, "§5Made in the image of the §9ManUtdFreedomMod(By DarkGamingDronze) §5but with more §6features §5and §eflexibility.", ChatColor.GOLD);
-        TFM_Util.playerMsg(sender_p, "§9This plugin is version §70.1 BETA", ChatColor.GOLD);
+       TFM_Util.playerMsg(sender_p, " §6§lManUtdFreedomModRevamped:", ChatColor.GOLD);
+        TFM_Util.playerMsg(sender_p, "Plugin by ManUtdPvP and DarkGamingDronze.", ChatColor.GREEN);
+        TFM_Util.playerMsg(sender_p, "§5Made from the §9ManUtdFreedomMod(By DarkGamingDronze) §5but with more §6features §5and §5ePerks§5. ", ChatColor.GOLD);
+        TFM_Util.playerMsg(sender_p, "This plugin is version §70.1 BETA", ChatColor.GOLD);
         
         
 
