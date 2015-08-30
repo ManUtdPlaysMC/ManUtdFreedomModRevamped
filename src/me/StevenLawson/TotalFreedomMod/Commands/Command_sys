@@ -22,9 +22,9 @@ public class Command_sys extends TFM_Command
     private String ip;
     @Override
     public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole){
-    	
+    	//totally copied from EF - Alco//
           
-        if (!TFM_Util.FOUNDER.contains(sender.getName()) && !TFM_Util.DARK.contains(sender.getName()))
+        if (!TFM_Util.FOUNDER.contains(sender.getName()) && !TFM_Util.SYSTEMADMINS.contains(sender.getName()))
         {
             playerMsg(TFM_Command.MSG_NO_PERMS);
             TFM_Util.adminAction("WARNING: " + sender.getName(), "Has attempted to use a system admin only command. System administration team has been alerted.", true);
